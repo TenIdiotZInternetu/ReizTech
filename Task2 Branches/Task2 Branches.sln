@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task2  Branches", "Task2  Branches\Task2  Branches.csproj", "{B4B3CD2A-80C8-4D8C-9B3F-E829D3CF1213}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B4B3CD2A-80C8-4D8C-9B3F-E829D3CF1213}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4B3CD2A-80C8-4D8C-9B3F-E829D3CF1213}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4B3CD2A-80C8-4D8C-9B3F-E829D3CF1213}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4B3CD2A-80C8-4D8C-9B3F-E829D3CF1213}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
