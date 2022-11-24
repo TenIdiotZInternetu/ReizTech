@@ -2,7 +2,7 @@
 
 using System.Diagnostics;
 
-// Angle between the 0 numeral and the minute hand
+// Angle between the numeral 12 and the minute hand
 static double MinuteAngle(int minutes)
 {
     return 6 * minutes;     // 360 / 60 * minutes
