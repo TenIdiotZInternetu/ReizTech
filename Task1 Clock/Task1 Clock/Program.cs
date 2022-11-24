@@ -40,3 +40,14 @@ Debug.Assert(AlmostEqual(HandsAngleDifference(5, 30), 15));
 Debug.Assert(AlmostEqual(HandsAngleDifference(11, 45), 82.5));
 Debug.Assert(AlmostEqual(HandsAngleDifference(12, 0), 0));
 Debug.Assert(AlmostEqual(HandsAngleDifference(20, 0), 120));
+
+// User interaction
+Console.WriteLine("Enter time in hh:mm format: ");
+
+string[] hands = Console.ReadLine().Split(new char[] {' ', ':'});
+int hourHand = Int32.Parse(hands[0]);
+int minuteHand = Int32.Parse(hands[1]);
+double angleDifference = HandsAngleDifference(hourHand, minuteHand);
+
+Console.Write($"The angle between hands is {angleDifference} degrees");
+Console.ReadKey();
