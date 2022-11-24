@@ -8,7 +8,7 @@ static double MinuteAngle(int minutes)
     return 6 * minutes;     // 360 / 60 * minutes
 }
 
-// Angle between the 0 numeral and the hour hand
+// Angle between the numeral 12 and the hour hand
 static double HourAngle(int hours, int minutes)
 {
     double hourFraction = 0.5 * minutes;         // 30 / 60 * minutes
