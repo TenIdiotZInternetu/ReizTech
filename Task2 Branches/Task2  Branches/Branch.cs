@@ -33,17 +33,18 @@ public class Branch
         return branches;
     }
 
-    // Returns the minimal amount of branches needed to create the final structure
-    public static int GetDepth(Branch branch, int depth = 0)
+    // Returns the minimal amount of subbranches needed to create the given branch
+    public static int GetDepth(Branch branch, bool isRoot = false)
     {
+        // The root branch is also considered a subbranch
+        int depth = Convert.ToInt32(isRoot);
+        
         // Every time a branch splits into two,
         // add depth and calculate depth of the subbranch
         foreach (Branch subbranch in branch.GetBranches())
         {
-            if (subbranch.GetBranches().Count == 0) continue;
-            if (subbranch == branch.GetBranches()[^1]) continue;
-
-            depth += 1 + GetDepth(subbranch, depth);
+            if (subbranch.GetBranches().Count < 2) continue;
+            depth += 1 + GetDepth(subbranch);
         }
 
         return depth;
