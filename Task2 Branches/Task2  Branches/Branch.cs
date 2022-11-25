@@ -37,7 +37,8 @@ public class Branch
     public static int GetDepth(Branch branch, bool isRoot = false)
     {
         // The root branch is also considered a subbranch
-        int depth = Convert.ToInt32(isRoot);
+        int depth = 0;
+        if (isRoot) depth = 1;
         
         // Every time a branch splits into two,
         // add depth and calculate depth of the subbranch
