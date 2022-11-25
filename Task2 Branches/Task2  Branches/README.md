@@ -5,6 +5,10 @@ Method *GetDepth* finds how many branch appends are needed to create a given str
 one of which - *AppendBranch* - was defined in the task's description and required for its completion. The value depth can be then interpreted as the dimension of 
 subbranches nested within subbranches.  
 
+The idea behind the depth calculation is that if a node within a structure has more than one child node, one child must come from the same node as its parent, while
+the other is a result of appending branches. So every time such a node is found, the depth increases by 1. The depth of the structure is given by the depth of its
+root branch and the accumulative depth of the root's subbranches, hence the recursion is used. Empty root branch has a depth of 1 from default.
+
 Each branch is constructed from empty subbranches, indicating the space between places where the branch splits in two. First node of a branch is shared with
 its parent (if it has one), creating kind of a joint, where multiple branches can be appended at once. 
 
